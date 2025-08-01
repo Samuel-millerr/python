@@ -1,0 +1,64 @@
+## 🧩 **Exercício de Abstração em Python – Sistema de Transporte Urbano**
+
+### 🎯 Objetivo:
+
+Você irá desenvolver um sistema de transporte urbano usando **abstração com classes abstratas**. 
+A ideia é garantir que todas as formas de transporte obedeçam a uma **interface mínima** de funcionalidades obrigatórias.
+
+---
+
+### 🧾 **Contexto**:
+
+Na sua cidade, existem diversos meios de transporte: ônibus, metrô, bicicletas e carros de aplicativo. Cada um tem suas características, 
+mas todos **devem poder iniciar uma viagem, encerrar uma viagem e calcular o valor** ao final.
+
+---
+
+### 📚 **Regras e Requisitos**:
+
+1. **Crie uma classe abstrata chamada `Transporte`**, que deve:
+
+   * Conter o método abstrato `iniciar_viagem()` que imprime ou registra o início da viagem.
+   * Conter o método abstrato `finalizar_viagem(distancia_em_km: float)` que calcula o valor e imprime o fim da viagem.
+   * Conter uma **propriedade abstrata** chamada `tipo`, que retorna o nome do tipo de transporte.
+
+2. **Implemente ao menos 3 subclasses**, por exemplo:
+
+   * `Onibus`: tarifa fixa de R\$ 4,50 por viagem.
+   * `BicicletaCompartilhada`: tarifa de R\$ 1,00 por km.
+   * `CarroApp`: tarifa de R\$ 3,00 por km + R\$ 5,00 de taxa mínima.
+
+3. Todas as subclasses devem implementar corretamente os métodos abstratos.
+
+4. Crie uma função chamada `usar_transporte()` que:
+
+   * Aceite qualquer instância de `Transporte`.
+   * Inicie a viagem.
+   * Finalize a viagem com uma distância aleatória (ou fornecida como parâmetro).
+   * Imprima o tipo de transporte e o valor cobrado.
+
+---
+
+### 🧪 **Extras (Opcional se quiser ir além)**
+
+* Adicione validação para impedir distâncias negativas.
+* Simule múltiplas viagens usando diferentes meios de transporte.
+* Use o módulo `random` para gerar distâncias simuladas entre 1 km e 15 km.
+
+---
+
+### 🧑‍💻 **Exemplo de uso esperado no final (apenas ilustração)**
+
+```python
+Transporte: Ônibus
+Iniciando viagem...
+Viagem finalizada. Valor: R$ 4,50
+
+Transporte: Bicicleta Compartilhada
+Iniciando viagem...
+Viagem finalizada. Distância: 3.0 km. Valor: R$ 3,00
+
+Transporte: Carro por Aplicativo
+Iniciando viagem...
+Viagem finalizada. Distância: 10.0 km. Valor: R$ 35,00
+```
